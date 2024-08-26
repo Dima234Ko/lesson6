@@ -8,46 +8,37 @@ console.log(Math.max(a,b));
 //-------------------------Task 2--------------------------//
 let int1 = Number(prompt('Enter int: '));
 
-switch (int1) {
-  case 1:
-    alert('January')
-    break;
-  case 2:
-    alert('February')
-    break;
-  case 3:
-    alert('March')
-    break;
-  case 4:
-    alert('April')
-    break;
-  case 5:
-    alert('May')
-    break;
-  case 6:
-    alert('June')
-    break;
-  case 7:
-    alert('July')
-    break;
-  case 8:
-    alert('August')
-    break;
-  case 9:
-    alert('September')
-    break;
-  case 10:
-    alert('October')
-    break;
-  case 11:
-    alert('November')
-    break;
-  case 12:
-    alert('December')
-    break;
-  default:
-    alert('Enter the month number')
+alert (selectionMonth (int1));
 
+function selectionMonth (int1){
+  switch (int1) {
+    case 1:
+      return 'January';
+    case 2:
+      return 'February';
+    case 3:
+      return 'March';
+    case 4:
+      return 'April';
+    case 5:
+      return 'May';
+    case 6:
+      return 'June';
+    case 7:
+      return 'July';
+    case 8:
+      return 'August';
+    case 9:
+      return 'September';
+    case 10:
+      return 'October';
+    case 11:
+      return 'November';
+    case 12:
+      return 'December';
+    default:
+      return 'Enter the month number';
+  }
 }
 
 
@@ -56,10 +47,14 @@ let circle = Number (prompt('Ener S circle'));
 let square = Number (prompt('Ener S square'));
 
 let diametr = 2*(Math.sqrt ((circle / 3.14)))
-let storona = Math.sqrt (square);
+let side = Math.sqrt (square);
 
-if (storona>diametr){
-  alert('True');
-} else {
-  alert('False');
+alert (willFit (diametr, side));
+
+function willFit (diametr, side){
+  if (side > diametr){
+    return 'True';
+  } else {
+    return 'False';
+  }
 }

@@ -1,26 +1,45 @@
 //-------------------------Task 1--------------------------//
-
-let B = 0;
-for (let A = 51; A > 50 && A < 100; A++){
-B = B + A;
+sumNumbers();
+function sumNumbers(){
+  let B = 0;
+  for (let A = 51; A > 50 && A < 100; A++){
+  B = B + A;
+  } return B;
 }
-console.log(B);
+
+console.log(sumNumbers());
 
 //-------------------------Task 2--------------------------//
 
-for (let A = 1; A < 10; A++){
-  console.log("7 * " +  A + " = " + 7 * A);
+function createArr (){
+  let arr = new Array;
+  for (let a = 1; a < 10; a++){
+    arr.push(7 * a);
   }
+  return arr;
+}
+
+
+createArr().forEach(function(el){console.log("7 * " +  el/7 + " = " + el)});
+
+
 
 //-------------------------Task 3--------------------------//
 
 let int1 = Number(prompt('Enter int: '));
-B = 0;
-N = 0;
-for (let A = 1; A < int1; A++){
-if(!(A % 2 == 0)) {
-B = B + A;
-N++;
+
+console.log(arithmeticMean(int1));
+
+function arithmeticMean(int1){
+  let b = 0;
+  let n = 0;
+  for (let a = 1; a < int1; a++){
+  if(!(a % 2 == 0)) {
+    b = b + a;
+    n++;
+  }
+  }
+  return(b/n);
 }
-}
-console.log(B/N);
+
+console.log(arithmeticMean(int1));
