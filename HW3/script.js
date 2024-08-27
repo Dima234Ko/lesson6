@@ -31,6 +31,7 @@ let int1 = Number(prompt('Enter int: '));
 console.log(arithmeticMean(int1));
 
 function arithmeticMean(int1){
+
   let b = 0;
   let n = 0;
   for (let a = 1; a < int1; a++){

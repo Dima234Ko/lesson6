@@ -11,22 +11,16 @@ function DayWeekend(inputDate){
   switch(inputDate.getDay()){
     case 0:
       return "sun";
-      break;
     case 1:
       return "mon";
-      break;
     case 2:
         return "tue";
-        break;
     case 3:
       return "wed";
-      break;
     case 4:
       return "thu";
-      break;
     case 5:
       return "fri";
-      break;
     default:
       return "sat";
   }
@@ -38,9 +32,13 @@ function DayWeekend(inputDate){
 let date = new Date();
 
 //Расчет количества минут с начала дня
-let min = (date.getHours()*60) + date.getMinutes();
 
-console.log(min);
+function calculationMin (date){
+  let min = (date.getHours()*60) + date.getMinutes();
+  return min;
+}
+
+console.log(calculationMin (date));
 
 
 //-------------------------Task 3--------------------------//
@@ -53,11 +51,15 @@ let ageUser2 = prompt("Enter age 2st user" + "\n" + "DD.MM.YYYY");
 let date1 = CreateDate(ageUser1);
 let date2 = CreateDate(ageUser2);
 
+console.log (comparisonData(date1, date2));
+
 //Сравнение дат и вывод результата в консоль
-if (date1 > date2) {
-    console.log("1st user younger");
-} else
-    console.log("2st user younger");
+function comparisonData(date1, date2){
+  if (date1 > date2) {
+    return "1st user younger";
+  } else
+    return "2st user younger";
+}
 
 //Функция преобразования строки в дату
 function CreateDate(input){
