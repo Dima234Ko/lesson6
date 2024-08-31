@@ -1,27 +1,27 @@
 //-------------------------Task 1--------------------------//
 
-let array = [1, 2, 3, 4, 5, 10, 7, 8, 9, 6];
-let newEl = 0;
+let Array = [1, 2, 3, 4, 5, 10, 7, 8, 9, 6];
+let NewEl = 0;
 
-array.forEach(function(el) {
-    newEl = newEl + el;
+Array.forEach(function(el) {
+    NewEl = NewEl + el;
 })
-console.log(newEl);
+console.log(NewEl);
 
 //-------------------------Task 2--------------------------//
 
-let newArray = array.map(function(el) {
+let NewArray = Array.map(function(el) {
     let modified = 2 * el;
     return modified;
 })
-console.log(newArray);
+console.log(NewArray);
 
 
 //-------------------------Task 3--------------------------//
 let numberMax;
 let numberMin;
 
-array.forEach(function(el, index) {
+Array.forEach(function(el, index) {
     
     if (index === 0) {
         numberMax = el;
