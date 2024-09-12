@@ -21,11 +21,8 @@
   "husky": "^9.1.5",
   "lint-staged": "^15.2.9"
 },
-// "lint-staged": {
-//   "*.js": "eslint --fix",
-//   "*.{js,css,md}": "prettier --write"
-// }
 "lint-staged": {
+  "*.js": "eslint --fix",
   "*.{js,css,md}": "prettier --write"
 }
 }
