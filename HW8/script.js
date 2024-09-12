@@ -29,16 +29,16 @@ function DayWeekend(inputDate){
 
 //-------------------------Task 2--------------------------//
 
-let date = new Date();
+
 
 //Расчет количества минут с начала дня
-
-function calculationMin (date){
-  let min = (date.getHours()*60) + date.getMinutes();
+function calculationMin (){
+  let now = Date.now();
+  let min = (now.getHours()*60) + now.getMinutes();
   return min;
 }
 
-console.log(calculationMin (date));
+console.log(calculationMin ());
 
 
 //-------------------------Task 3--------------------------//

@@ -1,7 +1,10 @@
 describe("Тесты к ДЗ №8", function() {
 
-    it("Проверка, что прошло 0 минут с начала дня", function() {
-        assert.strictEqual(calculationMin(new Date(2024, 7, 27)), 0);
+    it("Проверка, сколько прошло минут с начала дня", function() {
+        let date = Date.now();
+        const expectedMinutes = (date.getHours() * 60) + date.getMinutes();
+
+        assert.strictEqual(calculationMin(), expectedMinutes);
     });
 
     it("Проверка, что 27.07.24 - это вторник", function() {

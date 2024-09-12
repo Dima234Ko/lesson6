@@ -46,12 +46,12 @@ function selectionMonth (int1){
 let circle = Number (prompt('Ener S circle'));
 let square = Number (prompt('Ener S square'));
 
-let diametr = 2*(Math.sqrt ((circle / 3.14)))
-let side = Math.sqrt (square);
+alert (willFit (circle, square));
 
-alert (willFit (diametr, side));
+function willFit (circle, square){
+  let side = Math.sqrt (square);
+  let diametr = 2*(Math.sqrt ((circle / 3.14)));
 
-function willFit (diametr, side){
   if (side > diametr){
     return 'True';
   } else {

@@ -8,6 +8,7 @@ function multiplication (a, b){
     let c = a * b;
     return c;
 }
+ 
 
 
 //-------------------------Task 2--------------------------//
@@ -24,9 +25,12 @@ function calculatingTheLength (first, second){
 
 //-------------------------Task 3--------------------------//
 const num = prompt('Enter number: ');
+const numberNum = Number(num);
 
-console.log(sumFigure(num));
-
+if (!(isNaN(numberNum))){
+    console.log(sumFigure(num));
+} else alert('Введите число');
+    
 function sumFigure(num){
     let number3 = num % 10;
     let number1 = (num - num % 100)/100;
