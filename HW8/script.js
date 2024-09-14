@@ -6,15 +6,14 @@ const [day, month, year] = input.split(".");
 const inputDate = new Date(`${year}-${month}-${day}`);
 console.log(DayWeekend(inputDate));
 
-function DayWeekend(inputDate){
- 
-  switch(inputDate.getDay()){
+function DayWeekend(inputDate) {
+  switch (inputDate.getDay()) {
     case 0:
       return "sun";
     case 1:
       return "mon";
     case 2:
-        return "tue";
+      return "tue";
     case 3:
       return "wed";
     case 4:
@@ -26,20 +25,16 @@ function DayWeekend(inputDate){
   }
 }
 
-
 //-------------------------Task 2--------------------------//
 
-let date = new Date();
-
 //Расчет количества минут с начала дня
-
-function calculationMin (date){
-  let min = (date.getHours()*60) + date.getMinutes();
+function calculationMin() {
+  let now = Date.now();
+  let min = now.getHours() * 60 + now.getMinutes();
   return min;
 }
 
-console.log(calculationMin (date));
-
+console.log(calculationMin());
 
 //-------------------------Task 3--------------------------//
 
@@ -51,23 +46,18 @@ let ageUser2 = prompt("Enter age 2st user" + "\n" + "DD.MM.YYYY");
 let date1 = CreateDate(ageUser1);
 let date2 = CreateDate(ageUser2);
 
-console.log (comparisonData(date1, date2));
+console.log(comparisonData(date1, date2));
 
 //Сравнение дат и вывод результата в консоль
-function comparisonData(date1, date2){
+function comparisonData(date1, date2) {
   if (date1 > date2) {
     return "1st user younger";
-  } else
-    return "2st user younger";
+  } else return "2st user younger";
 }
 
 //Функция преобразования строки в дату
-function CreateDate(input){
-    const [day, month, year] = input.split(".");
-    const inputDate = new Date(`${year}-${month}-${day}`);
-    return inputDate;
+function CreateDate(input) {
+  const [day, month, year] = input.split(".");
+  const inputDate = new Date(`${year}-${month}-${day}`);
+  return inputDate;
 }
-
-  
-  
-  

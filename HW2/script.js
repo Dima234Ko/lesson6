@@ -2,59 +2,57 @@
 let a = 10;
 let b = 12;
 
-console.log(Math.max(a,b));
-
+console.log(Math.max(a, b));
 
 //-------------------------Task 2--------------------------//
-let int1 = Number(prompt('Enter int: '));
+let int1 = Number(prompt("Enter int: "));
 
-alert (selectionMonth (int1));
+alert(selectionMonth(int1));
 
-function selectionMonth (int1){
+function selectionMonth(int1) {
   switch (int1) {
     case 1:
-      return 'January';
+      return "January";
     case 2:
-      return 'February';
+      return "February";
     case 3:
-      return 'March';
+      return "March";
     case 4:
-      return 'April';
+      return "April";
     case 5:
-      return 'May';
+      return "May";
     case 6:
-      return 'June';
+      return "June";
     case 7:
-      return 'July';
+      return "July";
     case 8:
-      return 'August';
+      return "August";
     case 9:
-      return 'September';
+      return "September";
     case 10:
-      return 'October';
+      return "October";
     case 11:
-      return 'November';
+      return "November";
     case 12:
-      return 'December';
+      return "December";
     default:
-      return 'Enter the month number';
+      return "Enter the month number";
   }
 }
 
-
 //-------------------------Task 3--------------------------//
-let circle = Number (prompt('Ener S circle'));
-let square = Number (prompt('Ener S square'));
+let circle = Number(prompt("Ener S circle"));
+let square = Number(prompt("Ener S square"));
 
-let diametr = 2*(Math.sqrt ((circle / 3.14)))
-let side = Math.sqrt (square);
+alert(willFit(circle, square));
 
-alert (willFit (diametr, side));
+function willFit(circle, square) {
+  let side = Math.sqrt(square);
+  let diametr = 2 * Math.sqrt(circle / 3.14);
 
-function willFit (diametr, side){
-  if (side > diametr){
-    return 'True';
+  if (side > diametr) {
+    return "True";
   } else {
-    return 'False';
+    return "False";
   }
 }
