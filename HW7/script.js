@@ -1,8 +1,7 @@
 const button = document.querySelector(".button");
 button.addEventListener("click", buttonClick);
 document.querySelector(".button").style.display="none";
-
-let input = document.querySelector(".text-field");
+var input = document.querySelector(".text-field");
 
 let n = 0;
 
@@ -15,13 +14,12 @@ if (!input.value.length == 0){
 //Функция нажатия на кнопку
 function buttonClick() {
   addElement(input.value);
-  console.log(event.target['.text-field'].value);
 }
 
 //Функция добавления элемента
 function addElement(text) {
   const listItem = document.createElement("li");
-  n = n + 1;
+  n = getN(n);
   listItem.id = n;
   listItem.innerText = text;
   const list = document.querySelector(".list");
@@ -34,6 +32,10 @@ function addElement(text) {
   }
 
 } 
+
+function getN(n){
+  return (n + 1);
+}
 
 //Функция очистки поля ввода
 function clearInput(){

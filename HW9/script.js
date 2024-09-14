@@ -4,21 +4,38 @@ let a = 3;
 let b = 4;
 let c = 5;
 
+
+console.log(checkTriangle (a, b, c));
+
 //Проверка, что треугольник прямоугольный
-if (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2)){
-  console.log('right triangle');
+function checkTriangle (a, b, c){
+  let res;
+  if (Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2)){
+    res = 'Треугольник прямоугольный';
+  } else { res = 'Треугольник не прямоугольный';}
+    return res;
 }
 
 //-------------------------Task 2--------------------------//
 
-//Расчет длины окружности
+
 let r = +prompt('Enter R');
-let l = 2 * Math.PI * r;
-alert('L = ' + l);
+
+alert('L = ' + Circumference(r));
+
+//Расчет длины окружности
+function Circumference(r){
+  let l = 2 * Math.PI * r;
+  return l;
+}
+
+alert('S = ' + areaCircle(r));
 
 //Расчет площади круга
+function areaCircle(r){
 let s = Math.PI * Math.pow(r, 2);
-alert('S = ' + s);
+return s;
+}
 
 //-------------------------Task 3--------------------------//
 
