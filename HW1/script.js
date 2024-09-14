@@ -10,7 +10,6 @@ function multiplication (a, b){
 }
  
 
-
 //-------------------------Task 2--------------------------//
 const first = 'Next';
 const second = 'Lvl';
