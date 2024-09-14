@@ -12,8 +12,8 @@ describe("Тесты к Задаче №2", function() {
 
 
 describe("Тесты к Задаче №3", function() {
-    it("Проверка что переменная role имеет значение admin", function() {
+        it("Проверка что переменная role имеет значение admin", function() {
         assert.strictEqual(role, 'admin');
     });
 });
-  
+   
